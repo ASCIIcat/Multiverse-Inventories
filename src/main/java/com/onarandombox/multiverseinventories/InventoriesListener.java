@@ -263,6 +263,10 @@ public class InventoriesListener implements Listener {
         }, 2L);
     }
 
+    private boolean shouldHandlePlayerRespawn(PlayerRespawnEvent event) {
+        return !event.isBedSpawn() && !event.isAnchorSpawn();
+    }
+
     /**
      * Handles player respawns at the LOWEST priority.
      *
@@ -270,7 +274,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.LOWEST)
     public void lowestPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             World world = event.getPlayer().getWorld();
             this.currentGroups = this.inventories.getGroupManager()
                     .getGroupsForWorld(world.getName());
@@ -285,7 +289,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.LOW)
     public void lowPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             this.handleRespawn(event, EventPriority.LOW);
         }
     }
@@ -297,7 +301,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.NORMAL)
     public void normalPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             this.handleRespawn(event, EventPriority.NORMAL);
         }
     }
@@ -309,7 +313,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.HIGH)
     public void highPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             this.handleRespawn(event, EventPriority.HIGH);
         }
     }
@@ -321,7 +325,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.HIGHEST)
     public void highestPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             this.handleRespawn(event, EventPriority.HIGHEST);
         }
     }
@@ -333,7 +337,7 @@ public class InventoriesListener implements Listener {
      */
     @EventHandler(priority = EventPriority.MONITOR)
     public void monitorPriorityRespawn(PlayerRespawnEvent event) {
-        if (!event.isBedSpawn()) {
+        if (shouldHandlePlayerRespawn(event)) {
             this.handleRespawn(event, EventPriority.MONITOR);
             this.updateCompass(event);
         }
@@ -402,7 +406,7 @@ public class InventoriesListener implements Listener {
         }
 
         Logging.finest("Disallowing item or inventory holding %s to go from world %s to world %s since these" +
-                        "worlds do not share inventories", entity, fromWorld.getName(), toWorld.getName());
+                "worlds do not share inventories", entity, fromWorld.getName(), toWorld.getName());
         event.setCancelled(true);
     }
 }
