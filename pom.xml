@@ -118,10 +118,12 @@ and adjust the build number accordingly -->
                     </execution>
                 </executions>
             </plugin>
-            <!-- javadocs are broken!
-            <plugin>
+            <!-- <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8.1</version>
+                <version>2.10.4</version>
+                <configuration>
+                    <source>8</source>
+                </configuration>
                 <executions>
                     <execution>
                         <id>javadoc-jar</id>
@@ -129,10 +131,12 @@ and adjust the build number accordingly -->
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                        <configuration>
+                            <failOnError>false</failOnError>
+                        </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            -->
+            </plugin> -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -200,10 +204,11 @@ and adjust the build number accordingly -->
         </plugins>
     </build>
     <dependencies>
+        <!--This adds the Spigot API artifact to the build -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.14.4-R0.1-SNAPSHOT</version>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

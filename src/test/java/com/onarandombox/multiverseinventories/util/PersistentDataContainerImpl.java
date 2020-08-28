@@ -17,6 +17,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class PersistentDataContainerImpl implements PersistentDataContainer {
 
@@ -42,7 +43,8 @@ public class PersistentDataContainerImpl implements PersistentDataContainer {
     }
 
     @Override
-    public <T, Z> @NotNull Z getOrDefault(@NotNull NamespacedKey key, @NotNull PersistentDataType<T, Z> type, @NotNull Z defaultValue) {
+    public <T, Z> @NotNull Z getOrDefault(@NotNull NamespacedKey key, @NotNull PersistentDataType<T, Z> type,
+            @NotNull Z defaultValue) {
         return (Z) data.getOrDefault(key.toString(), defaultValue);
     }
 
@@ -59,5 +61,11 @@ public class PersistentDataContainerImpl implements PersistentDataContainer {
     @Override
     public @NotNull PersistentDataAdapterContext getAdapterContext() {
         return adapterContext;
+    }
+
+    @Override
+    public Set<NamespacedKey> getKeys() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

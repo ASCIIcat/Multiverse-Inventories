@@ -5,6 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
@@ -17,7 +18,7 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 public class MockPlayerInventory implements PlayerInventory {
-    
+
     ItemStack[] armorContents = new ItemStack[PlayerStats.ARMOR_SIZE];
     ItemStack[] inventoryContents = new ItemStack[PlayerStats.INVENTORY_SIZE];
 
@@ -78,22 +79,22 @@ public class MockPlayerInventory implements PlayerInventory {
 
     @Override
     public ItemStack getItemInHand() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void setItemInHand(ItemStack itemStack) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public int getHeldItemSlot() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public HumanEntity getHolder() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
@@ -102,7 +103,7 @@ public class MockPlayerInventory implements PlayerInventory {
     }
 
     public String getName() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
@@ -129,12 +130,12 @@ public class MockPlayerInventory implements PlayerInventory {
 
     @Override
     public HashMap<Integer, ItemStack> addItem(ItemStack... itemStacks) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public HashMap<Integer, ItemStack> removeItem(ItemStack... itemStacks) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
@@ -149,106 +150,106 @@ public class MockPlayerInventory implements PlayerInventory {
 
     @Override
     public boolean contains(Material material) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public boolean contains(ItemStack itemStack) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public boolean contains(Material material, int i) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public boolean contains(ItemStack itemStack, int i) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public HashMap<Integer, ? extends ItemStack> all(Material material) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public HashMap<Integer, ? extends ItemStack> all(ItemStack itemStack) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public int first(Material material) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public int first(ItemStack itemStack) {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public int firstEmpty() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void remove(Material material) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void remove(ItemStack itemStack) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void clear(int i) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void clear() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public List<HumanEntity> getViewers() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     public String getTitle() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public InventoryType getType() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public ListIterator<ItemStack> iterator() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public int getMaxStackSize() {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public void setMaxStackSize(int i) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public ListIterator<ItemStack> iterator(int i) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public boolean containsAtLeast(final ItemStack itemStack, final int i) {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false; // To change body of implemented methods use File | Settings | File Templates.
     }
 
     private static Map<String, Object> makeMap(ItemStack[] items) {
@@ -262,8 +263,7 @@ public class MockPlayerInventory implements PlayerInventory {
     }
 
     public String toString() {
-        return "{\"inventoryContents\":" + makeMap(getContents())
-                + ",\"armorContents\":" + makeMap(getArmorContents())
+        return "{\"inventoryContents\":" + makeMap(getContents()) + ",\"armorContents\":" + makeMap(getArmorContents())
                 + "}";
     }
 
@@ -321,6 +321,24 @@ public class MockPlayerInventory implements PlayerInventory {
 
     @Override
     public Spliterator<ItemStack> spliterator() {
+        return null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public void setItem(EquipmentSlot slot, ItemStack item) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public ItemStack getItem(EquipmentSlot slot) {
+        
         return null;
     }
 }
