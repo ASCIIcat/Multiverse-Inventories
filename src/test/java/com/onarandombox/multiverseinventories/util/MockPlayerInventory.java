@@ -342,15 +342,4 @@ public class MockPlayerInventory implements PlayerInventory {
         return false;
     }
 
-    @Override
-    public void setItem(EquipmentSlot slot, ItemStack item) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public ItemStack getItem(EquipmentSlot slot) {
-        
-        return null;
-    }
 }

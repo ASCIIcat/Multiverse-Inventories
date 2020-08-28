@@ -74,10 +74,4 @@ public class PersistentDataContainerImpl implements PersistentDataContainer {
     public @NotNull PersistentDataAdapterContext getAdapterContext() {
         return adapterContext;
     }
-
-    @Override
-    public Set<NamespacedKey> getKeys() {
-        // TODO Auto-generated method stub
-        return null;
-    }
 }
